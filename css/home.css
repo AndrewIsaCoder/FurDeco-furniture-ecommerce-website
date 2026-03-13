@@ -17,9 +17,20 @@
   list-style: none;    
 }
 
+.three-row-centered-navbar{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 .wooden-kitchen-pp {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
   display: block;
 }
+
