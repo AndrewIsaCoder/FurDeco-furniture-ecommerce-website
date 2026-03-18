@@ -5,7 +5,6 @@
 
 }
 
-/* Logo - Dimensiune Medie */
 .main-logo-navbar {
   height: 65px; 
 }
@@ -33,6 +32,6 @@
   display: block;
 }
 
-.navbar{
-    font-family: ;
+.nav-links > a {
+  text-decoration: none;
 }
