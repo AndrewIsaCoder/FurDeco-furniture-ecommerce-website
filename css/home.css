@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   padding: 0;
@@ -6,13 +6,15 @@
   box-sizing: border-box;
 }
 
-:root{
-  --primary-color:#f0f8ff;
-  --heading-main-bg-color:#5D4F41;
+:root {
+  --primary-color: #f0f8ff;
+  --heading-main-bg-color: #5d4f41;
+  --primary-font-color-black: #000000;
+  --products-background-color: #faf1e8;
 }
 
 .main-logo-navbar {
-  height: 65px; 
+  height: 65px;
 }
 
 .navbar ul {
@@ -23,16 +25,15 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  padding: 20px 60px; 
+  justify-content: space-between;
+  padding: 20px 60px;
   list-style: none;
   text-decoration: none;
 }
 
-
 .nav-links {
   display: flex;
-  gap: 30px; 
+  gap: 30px;
 }
 
 .wooden-kitchen-pp {
@@ -49,23 +50,23 @@
   font-weight: 300;
 }
 
-.cart-items > a{
+.cart-items > a {
   font-family: Inter;
   text-decoration: none;
   color: var(--primary-color);
 }
 
-.main-heading{
+.main-heading {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main-heading-center{
+.main-heading-center {
   position: absolute;
   text-align: center;
-  background-color:rgb(93, 79, 65 , 0.5);
+  background-color: rgb(93, 79, 65, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   width: 90;
@@ -73,11 +74,11 @@
   padding: 60px 80px;
   font-family: Inter;
   font-weight: 200;
-  font-size:large;
+  font-size: large;
   color: var(--primary-color);
 }
 
-.button-order-now{
+.button-order-now {
   padding: 20px 40px;
   border-radius: 5px;
   border: 0px;
@@ -87,3 +88,57 @@
   margin-top: 5px;
 }
 
+.products-showcase {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.products-showcase h1 {
+  font-family: inter;
+  font-size: 2.5rem;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: var(--primary-font-color-black);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.furniture-showcase {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.furniture-showcase img {
+  width: 280px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.product-bg-check {
+  background-color: var(--products-background-color);
+}
+
+.product-title , .product-price{
+  font-family: inter;
+  font-weight: 500;
+}
+
+.product-price{
+  color:#8C8C8C ;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.products-botton1{
+  padding: 20px 40px;
+  font-family: inter;
+  font-weight: 700;
+  font-size: medium;
+  border-radius: 5px;
+  background-color: var(--primary-font-color-black);
+  color: #f0f8ff;
+  border: 0px;
+  margin-top: 30px;
+}
