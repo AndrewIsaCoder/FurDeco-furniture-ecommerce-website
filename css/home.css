@@ -147,28 +147,63 @@
 
 .marquee-container {
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
-  background-color: #fff; 
+  background-color: #fff;
   padding: 40px 0;
   border-bottom: 1px solid #eee;
 }
 
-
 .marquee-content {
   display: flex;
-  width: max-content; 
+  width: max-content;
   gap: 80px;
   animation: scroll-text 20s linear infinite;
-  
+
   /* Stilul textului tău */
   color: var(--ad-heading-color);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 100px;
   font-weight: 500;
 }
 
 @keyframes scroll-text {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); } 
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ad-image {
+  width: 100%;
+height: auto;
+display: block;
+}
+
+.ad-section-container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-header-2nd{
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  background-color: rgba(51, 47, 43, 0.5);
+  backdrop-filter:blur(10px) ;
+  border-radius: 30px;
+  width: 40%;
+  max-width: 600px;
+  padding: 60px;
+  font-family: inter;
+}
+
+
+.ad-header-2nd > h1{
+  color: var(--primary-color);
 }
