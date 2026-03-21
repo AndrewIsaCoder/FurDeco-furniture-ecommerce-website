@@ -178,11 +178,11 @@
 
 .ad-image {
   width: 100%;
-height: auto;
-display: block;
+  height: auto;
+  display: block;
 }
 
-.ad-section-container{
+.ad-section-container {
   position: relative;
   width: 100%;
   display: flex;
@@ -190,12 +190,12 @@ display: block;
   align-items: center;
 }
 
-.ad-header-2nd{
+.ad-header-2nd {
   position: absolute;
   top: 30%;
   right: 10%;
   background-color: rgba(51, 47, 43, 0.5);
-  backdrop-filter:blur(10px) ;
+  backdrop-filter: blur(10px);
   border-radius: 30px;
   width: 40%;
   max-width: 600px;
@@ -203,7 +203,56 @@ display: block;
   font-family: inter;
 }
 
-
-.ad-header-2nd > h1{
+.ad-header-2nd > h1 {
   color: var(--primary-color);
+}
+
+.ad-header-2nd > p {
+  color: #988e86;
+}
+
+.products-button2 {
+  padding: 20px 40px;
+  font-family: inter;
+  font-weight: 700;
+  font-size: medium;
+  border-radius: 5px;
+  background-color: var(--products-background-color);
+  color: #000000;
+  border: 0px;
+  margin-top: 40px;
+}
+
+.copyright-tag {
+  color: #988e86;
+  font-family: inter;
+  font-size: x-small;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #3e342b; 
+  border-radius: 1px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180px, #5d4f41, #8b735b); 
+  border-radius: 10px;
+  border: 2px solid #000000; 
+  transition: all 0.3s ease;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e342b; 
 }
