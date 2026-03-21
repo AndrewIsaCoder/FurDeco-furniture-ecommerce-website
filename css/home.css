@@ -11,6 +11,7 @@
   --heading-main-bg-color: #5d4f41;
   --primary-font-color-black: #000000;
   --products-background-color: #faf1e8;
+  --ad-heading-color: rgb(191, 191, 191, 0.8);
 }
 
 .main-logo-navbar {
@@ -120,18 +121,19 @@
   background-color: var(--products-background-color);
 }
 
-.product-title , .product-price{
+.product-title,
+.product-price {
   font-family: inter;
   font-weight: 500;
 }
 
-.product-price{
-  color:#8C8C8C ;
+.product-price {
+  color: #8c8c8c;
   font-weight: 400;
   margin-top: 5px;
 }
 
-.products-botton1{
+.products-botton1 {
   padding: 20px 40px;
   font-family: inter;
   font-weight: 700;
@@ -140,5 +142,33 @@
   background-color: var(--primary-font-color-black);
   color: #f0f8ff;
   border: 0px;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden; 
+  white-space: nowrap;
+  background-color: #fff; 
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+
+
+.marquee-content {
+  display: flex;
+  width: max-content; 
+  gap: 80px;
+  animation: scroll-text 20s linear infinite;
+  
+  /* Stilul textului tău */
+  color: var(--ad-heading-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 100px;
+  font-weight: 500;
+}
+
+@keyframes scroll-text {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } 
 }
