@@ -156,3 +156,7 @@ border-radius: 30px;
 .sidebar-section li:hover:not(.active) img {
   opacity: 0.8;
 }
+
+a{
+    margin-left: 5px;
+}
