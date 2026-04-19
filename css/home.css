@@ -70,7 +70,7 @@
   background-color: rgb(93, 79, 65, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  width: 90;
+  width: 90%;
   max-width: 850px;
   padding: 60px 80px;
   font-family: Inter;
@@ -208,7 +208,7 @@
 }
 
 .ad-header-2nd > p {
-  color: #988e86;
+  color: #d6d6d6;
 }
 
 .products-button2 {
@@ -233,26 +233,186 @@
 }
 
 
-::-webkit-scrollbar {
-  width: 10px; 
-  height: 10px; 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .navbar ul {
+    padding: 18px 30px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .main-heading-center {
+    padding: 44px 40px;
+    max-width: 760px;
+  }
+
+  .furniture-showcase {
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  .furniture-showcase img {
+    width: 240px;
+    height: 305px;
+  }
+
+  .marquee-content {
+    font-size: 72px;
+    gap: 56px;
+  }
+
+  .ad-header-2nd {
+    top: 24%;
+    right: 6%;
+    width: 55%;
+    padding: 40px;
+  }
 }
 
+@media (max-width: 768px) {
+  .navbar ul {
+    padding: 14px 18px;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: rgba(30, 25, 20, 0.48);
+    backdrop-filter: blur(8px);
+  }
+
+  .main-logo-navbar {
+    height: 52px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+
+  .wooden-kitchen-pp {
+    height: 80vh;
+  }
+
+  .main-heading-center {
+    width: calc(100% - 40px);
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .main-heading-center h1 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+
+  .button-order-now {
+    padding: 14px 24px;
+  }
+
+  .products-showcase h1 {
+    font-size: 2rem;
+  }
+
+  .furniture-showcase {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .furniture-showcase img {
+    width: min(84vw, 340px);
+    height: auto;
+  }
+
+  .products-botton1 {
+    width: min(90%, 330px);
+  }
+
+  .marquee-content {
+    font-size: 50px;
+    gap: 40px;
+  }
+
+  .ad-section-container {
+    flex-direction: column;
+  }
+
+  .ad-image {
+    min-height: 430px;
+    object-fit: cover;
+  }
+
+  .ad-header-2nd {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% - 32px);
+    margin: -75px auto 0;
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .products-button2 {
+    width: 100%;
+    padding: 16px 24px;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    padding: 12px 14px;
+  }
+
+  .nav-links > a,
+  .cart-items > a {
+    font-size: 0.9rem;
+  }
+
+  .main-heading-center {
+    width: calc(100% - 24px);
+    padding: 20px 14px;
+  }
+
+  .main-heading-center h1 {
+    font-size: 1.2rem;
+  }
+
+  .products-showcase h1 {
+    font-size: 1.6rem;
+    margin-top: 36px;
+  }
+
+  .marquee-content {
+    font-size: 34px;
+    gap: 24px;
+  }
+
+  .ad-header-2nd {
+    width: calc(100% - 20px);
+    margin-top: -60px;
+    padding: 20px 14px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
 ::-webkit-scrollbar-track {
-  background: #3e342b; 
+  background: #3e342b;
   border-radius: 1px;
 }
 
-
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180px, #5d4f41, #8b735b); 
+  background: linear-gradient(180px, #5d4f41, #8b735bef);
   border-radius: 10px;
-  border: 2px solid #000000; 
+  border: 2px solid #000000;
   transition: all 0.3s ease;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #3e342b; 
+  background: #3e342b;
 }
