@@ -84,3 +84,21 @@
     height: 42px;
   }
 }
+
+.Introduction-welcome-text {
+  font-size: 100px;
+  font-weight: 300;
+}
+
+.welcome-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-auto-columns: 2rem;
+}
+
+.image-showcase {
+  padding-top: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+}
