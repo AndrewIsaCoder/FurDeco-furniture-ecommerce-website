@@ -88,7 +88,7 @@
 .Introduction-welcome-text {
   font-size: 100px;
   font-weight: 300;
-  padding-left: 50px;
+  padding-left: 0;
 }
 
 .welcome-showcase {
@@ -96,6 +96,8 @@
   align-items: center;
   justify-content: space-between;
   grid-auto-columns: 2rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .image-showcase {
@@ -123,9 +125,52 @@
 .second-about-us-image-showcase {
   width: 90%;
   height: 800px;
-  padding-top: 50px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.image-des {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
   margin: 0 auto;
+  padding-top: 20px;
+  font-weight: 300;
+}
+
+.lamp-furdeco-image {
+  display: block;
+  height: 700px;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.lamp-furdeco-description {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  width: 90%;
+  margin: 100px auto 0 auto;
+}
+
+.lamp-furdeco-description p {
+  padding-left:400px ;
+  font-size: 50px;
+  line-height: 1.55;
+  font-weight: 200;
+}
+
+.o-p-styling{
+  font-style: italic;
+  font-weight: 500;
+}
+
+.team-presenting-p{
+  font-size: 50px;
+  font-weight: 300;
 }
