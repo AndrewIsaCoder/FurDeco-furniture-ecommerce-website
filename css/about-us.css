@@ -103,3 +103,19 @@
   padding-right: 50px;
   border-radius: 20px;
 }
+
+.image-with-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-down-image{
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.furdeco-styling-text-p{
+  font-style:italic;
+}

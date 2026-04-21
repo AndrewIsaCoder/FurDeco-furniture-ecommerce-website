@@ -378,3 +378,12 @@
     font-size: 0.95rem;
   }
 }
+
+.copyright-tag {
+  color: #988e86;
+  font-family: inter;
+  font-size: x-small;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
