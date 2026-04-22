@@ -332,7 +332,6 @@ input {
 
 .item-image {
   width: 132px;
-  height: 104px;
   object-fit: cover;
   border-radius: 14px;
   background: linear-gradient(135deg, #efeadf, #f8f5ef);
