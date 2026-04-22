@@ -158,20 +158,165 @@
   margin: 100px auto 0 auto;
 }
 
-.lamp-furdeco-description p {
-  padding-left:400px ;
+.lamp-furdeco-description .p-des {
+  padding-left: 400px;
   font-size: 50px;
   line-height: 1.55;
   font-weight: 200;
 }
 
-.o-p-styling{
+.o-p-styling {
   font-style: italic;
   font-weight: 500;
 }
 
-.team-presenting-p{
+.team-presenting-p {
   padding-top: 0px;
   font-size: 50px;
   font-weight: 300;
+}
+
+.copyright-tag {
+  color: #988e86;
+  font-family: inter;
+  font-size: x-small;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 120px 0 24px;
+}
+
+@media (max-width: 1200px) {
+  .Introduction-welcome-text {
+    font-size: clamp(4rem, 7vw, 6rem);
+  }
+
+  .lamp-furdeco-description .p-des {
+    padding-left: 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .lamp-furdeco-description {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome-showcase {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    width: 92%;
+  }
+
+  .Introduction-welcome-text {
+    font-size: clamp(3rem, 9vw, 5rem);
+  }
+
+  .image-with-text {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .image-showcase {
+    width: 100%;
+    max-width: 560px;
+    padding-right: 0;
+    padding-top: 20px;
+  }
+
+  .text-down-image {
+    text-align: left;
+  }
+
+  .second-about-us-image-showcase {
+    height: auto;
+    width: 92%;
+  }
+
+  .image-des {
+    width: 92%;
+    gap: 16px;
+  }
+
+  .lamp-furdeco-description {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 92%;
+    margin-top: 60px;
+  }
+
+  .lamp-furdeco-image {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+  }
+
+  .lamp-furdeco-description .p-des {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cart-items {
+    margin-left: auto;
+  }
+
+  .main-logo-navbar {
+    height: 42px;
+  }
+
+  .welcome-showcase,
+  .second-about-us-image-showcase,
+  .image-des,
+  .lamp-furdeco-description {
+    width: 94%;
+  }
+
+  .Introduction-welcome-text {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    line-height: 1;
+  }
+
+  .text-down-image {
+    font-size: 12px;
+  }
+
+  .image-showcase {
+    max-width: 100%;
+  }
+
+  .second-about-us-image-showcase {
+    margin-top: 32px;
+  }
+
+  .image-des {
+    padding-top: 14px;
+    font-size: 0.85rem;
+  }
+
+  .lamp-furdeco-description .p-des {
+    font-size: 1.55rem;
+  }
+
+  .copyright-tag {
+    font-size: 0.65rem;
+    margin-top: 80px;
+  }
 }
