@@ -181,7 +181,6 @@ function renderProductCard(product, withButton) {
         <p class="product-title">${product.title}</p>
         <p class="product-price">${formatPrice(product.price)}</p>
       </div>
-      <p class="product-description-secondary">${product.description}</p>
       ${
         withButton
           ? '<button class="add-to-cart-btn" type="button">Add to cart</button>'
@@ -496,7 +495,18 @@ function setupScrollTopButton() {
         font-size: 1.15rem;
         font-weight: 800;
         line-height: 1;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(10px);
+      }
+
+      .scroll-top-btn.is-visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
       }
 
       .scroll-top-btn:hover {
@@ -515,15 +525,22 @@ function setupScrollTopButton() {
 
   const button = document.createElement("button");
   button.type = "button";
-  button.textContent = "↑";
+  button.innerHTML =
+    '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M5 12L12 5L19 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   button.setAttribute("aria-label", "Scroll to top");
   button.className = "scroll-top-btn";
+
+  const updateVisibility = () => {
+    button.classList.toggle("is-visible", window.scrollY > 420);
+  };
 
   button.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
   document.body.appendChild(button);
+  updateVisibility();
+  window.addEventListener("scroll", updateVisibility, { passive: true });
 }
 
 function init() {
