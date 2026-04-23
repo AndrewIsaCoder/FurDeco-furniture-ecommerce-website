@@ -462,8 +462,10 @@ input {
 }
 
 .gift-bow {
-  font-size: 2rem;
   opacity: 0.8;
+  padding-right: 50px;
+  padding-top: 10px;
+
 }
 
 .price-card {
