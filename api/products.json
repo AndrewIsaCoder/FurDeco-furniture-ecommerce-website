@@ -1,0 +1,50 @@
+[
+  {
+    "id": "linen-curve-chair",
+    "title": "Linen Curve Chair",
+    "price": 149,
+    "image": "./assets/website-skeleton-p/products/chair-furdeco.png",
+    "alt": "Linen Curve Chair",
+    "description": "Natural oak, soft linen finish, living room ready."
+  },
+  {
+    "id": "amber-lounge-sofa",
+    "title": "Amber Lounge Sofa",
+    "price": 399,
+    "image": "./assets/website-skeleton-p/products/sofa-furdeco.png",
+    "alt": "Amber Lounge Sofa",
+    "description": "Warm beige sofa with relaxed support."
+  },
+  {
+    "id": "oak-frame-table",
+    "title": "Oak Frame Table",
+    "price": 229,
+    "image": "./assets/website-skeleton-p/products/table-furdeco.png",
+    "alt": "Oak Frame Table",
+    "description": "Compact coffee table with a solid walnut tone."
+  },
+  {
+    "id": "cloud-armchair",
+    "title": "Cloud Armchair",
+    "price": 219,
+    "image": "./assets/website-skeleton-p/products/chair2.0-furdeco.png",
+    "alt": "Cloud Armchair",
+    "description": "Soft lounge chair for reading corners."
+  },
+  {
+    "id": "terra-sofa",
+    "title": "Terra Sofa",
+    "price": 499,
+    "image": "./assets/website-skeleton-p/products/sofa2.0-furdeco.png",
+    "alt": "Terra Sofa",
+    "description": "Modern sectional look with a clean silhouette."
+  },
+  {
+    "id": "walnut-studio-table",
+    "title": "Walnut Studio Table",
+    "price": 179,
+    "image": "./assets/website-skeleton-p/products/table2.0-furdeco.png",
+    "alt": "Walnut Studio Table",
+    "description": "Minimal table for small spaces and work areas."
+  }
+]

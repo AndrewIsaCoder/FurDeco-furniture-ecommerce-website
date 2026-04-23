@@ -1,55 +1,48 @@
 const STORAGE_KEY = "furdeco-cart-v1";
+const PRODUCTS_API_URL = "./api/products.json";
 
-const catalog = [
-  {
-    id: "linen-curve-chair",
-    title: "Linen Curve Chair",
-    price: 149,
-    image: "./assets/website-skeleton-p/products/chair-furdeco.png",
-    alt: "Linen Curve Chair",
-    description: "Natural oak, soft linen finish, living room ready.",
-  },
-  {
-    id: "amber-lounge-sofa",
-    title: "Amber Lounge Sofa",
-    price: 399,
-    image: "./assets/website-skeleton-p/products/sofa-furdeco.png",
-    alt: "Amber Lounge Sofa",
-    description: "Warm beige sofa with relaxed support.",
-  },
-  {
-    id: "oak-frame-table",
-    title: "Oak Frame Table",
-    price: 229,
-    image: "./assets/website-skeleton-p/products/table-furdeco.png",
-    alt: "Oak Frame Table",
-    description: "Compact coffee table with a solid walnut tone.",
-  },
-  {
-    id: "cloud-armchair",
-    title: "Cloud Armchair",
-    price: 219,
-    image: "./assets/website-skeleton-p/products/chair2.0-furdeco.png",
-    alt: "Cloud Armchair",
-    description: "Soft lounge chair for reading corners.",
-  },
-  {
-    id: "terra-sofa",
-    title: "Terra Sofa",
-    price: 499,
-    image: "./assets/website-skeleton-p/products/sofa2.0-furdeco.png",
-    alt: "Terra Sofa",
-    description: "Modern sectional look with a clean silhouette.",
-  },
-  {
-    id: "walnut-studio-table",
-    title: "Walnut Studio Table",
-    price: 179,
-    image: "./assets/website-skeleton-p/products/table2.0-furdeco.png",
-    alt: "Walnut Studio Table",
-    description: "Minimal table for small spaces and work areas.",
-  },
-];
+let catalog = [];
+
+function normalizeProduct(product, index) {
+  const safeTitle = String(product?.title || `Product ${index + 1}`).trim();
+  const safeId = String(
+    product?.id || safeTitle.toLowerCase().replace(/\s+/g, "-"),
+  ).trim();
+  const safePrice = Number(product?.price);
+
+  return {
+    id: safeId || `product-${index + 1}`,
+    title: safeTitle,
+    price: Number.isFinite(safePrice) ? safePrice : 0,
+    image:
+      product?.image ||
+      "./assets/website-skeleton-p/products/chair-furdeco.png",
+    alt: String(product?.alt || safeTitle),
+    description: String(product?.description || ""),
+  };
+}
+
+async function loadCatalogFromApi() {
+  try {
+    const response = await fetch(PRODUCTS_API_URL, { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error(`Products API failed with status ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const products = Array.isArray(payload) ? payload : payload?.products;
+
+    if (!Array.isArray(products) || !products.length) {
+      throw new Error("Products API returned an empty list");
+    }
+
+    catalog = products.map(normalizeProduct).filter((product) => product.id);
+  } catch (error) {
+    console.warn("FurDeco: failed to load products API.", error);
+    catalog = [];
+  }
+}
 
 function formatPrice(value) {
   return `$${value.toFixed(2)}`;
@@ -543,7 +536,8 @@ function setupScrollTopButton() {
   window.addEventListener("scroll", updateVisibility, { passive: true });
 }
 
-function init() {
+async function init() {
+  await loadCatalogFromApi();
   updateCartBadges();
   renderHomeProducts();
   renderProductsPage();
@@ -552,4 +546,6 @@ function init() {
   setupScrollTopButton();
 }
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", () => {
+  init();
+});
