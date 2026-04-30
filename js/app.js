@@ -76,7 +76,7 @@ function setupScrollTopButton() {
   button.className = "scroll-top-btn";
 
   const updateVisibility = () => {
-    button.classList.toggle("is-visible", window.scrollY > 420);
+    button.classList.toggle("is-visible", window.scrollY > 420); // px
   };
 
   button.addEventListener("click", () => {
