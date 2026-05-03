@@ -21,3 +21,11 @@ function normalizeCoupon(code){
    return normalized;
 }
 
+function validateAndNotify(){
+    let valoareIntrodusa = document.getElementById("promocode-form").value;
+    if (normalizeCoupon(valoareIntrodusa) === RAW_COUPON){
+        alert("Cuponul a fost aplicat cu succes!")
+    } else {
+        alert("Cuponul nu este valid!")
+    }
+}
