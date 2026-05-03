@@ -46,3 +46,19 @@ function login(){
         return false;
     }
 }
+
+let suma = 0;
+
+function adaugaLaSuma(pret){
+    suma += pret;
+
+    console.log("Suma totala curenta a utilizaztorului logat este : " + suma +"$");
+}
+
+adaugaLaSuma(45.90)
+adaugaLaSuma(199.00)
+adaugaLaSuma(129.56)
+
+function openCart(){
+    alert("Suma totala a comenzii este: " + suma + "$" )
+}
