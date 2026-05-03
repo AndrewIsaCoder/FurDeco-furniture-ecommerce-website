@@ -34,6 +34,15 @@ function validateAndNotify(){
 }
 
 function login(){
-    let valoareInputEmail = document.getElementById("").value;
-    let valoareInputPassword = document.getElementById("").value;
+    let valoareInputEmail = document.getElementById("email").value.trim();
+    let valoareInputPassword = document.getElementById("password").value.trim();
+    const VALID_EMAIL = "admin@admin.com"
+    const VALID_PASS = "admin"
+    if (valoareInputEmail === VALID_EMAIL && valoareInputPassword === VALID_PASS) {
+        console.log("Utilizatorul s-a autentificat!")
+        return true;
+    } else {
+        console.log("Utilizatorul nu s-a autentificat cu succes!")
+        return false;
+    }
 }
