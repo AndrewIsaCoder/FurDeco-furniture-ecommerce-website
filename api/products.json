@@ -1,19 +1,19 @@
 [
   {
-    "id": "linen-curve-chair",
-    "title": "Linen Curve Chair",
-    "price": 149,
-    "image": "./assets/website-skeleton-p/products/chair-furdeco.png",
-    "alt": "Linen Curve Chair",
-    "description": "Natural oak, soft linen finish, living room ready."
-  },
-  {
     "id": "amber-lounge-sofa",
     "title": "Amber Lounge Sofa",
     "price": 399,
     "image": "./assets/website-skeleton-p/products/sofa-furdeco.png",
     "alt": "Amber Lounge Sofa",
     "description": "Warm beige sofa with relaxed support."
+  },
+  {
+    "id": "linen-curve-chair",
+    "title": "Linen Curve Chair",
+    "price": 149,
+    "image": "./assets/website-skeleton-p/products/chair-furdeco.png",
+    "alt": "Linen Curve Chair",
+    "description": "Natural oak, soft linen finish, living room ready."
   },
   {
     "id": "oak-frame-table",
