@@ -17,15 +17,23 @@ console.log(typeof PRODUCT1_PRICE);
 console.log(typeof VAT_RATE);       
 
 function normalizeCoupon(code){
-   let normalized = code.trim().toUppercase();
+   let normalized = code.trim().toUpperCase();
    return normalized;
 }
 
 function validateAndNotify(){
+    console.log("Funcția a fost pornită!"); // Această linie va apărea în consola browserului (F12)
     let valoareIntrodusa = document.getElementById("promocode-form").value;
     if (normalizeCoupon(valoareIntrodusa) === RAW_COUPON){
-        alert("Cuponul a fost aplicat cu succes!")
+        alert("Cuponul a fost aplicat cu succes! ✅")
+        console.log("Cuponul a fost aplicat cu succes de catre utilizator!")
     } else {
-        alert("Cuponul nu este valid!")
+        alert("Cuponul nu este valid! ❌")
+        console.log("Cuponul nu a fost aplicat cu succes de catre utilizator!")
     }
+}
+
+function login(){
+    let valoareInputEmail = document.getElementById("").value;
+    let valoareInputPassword = document.getElementById("").value;
 }
