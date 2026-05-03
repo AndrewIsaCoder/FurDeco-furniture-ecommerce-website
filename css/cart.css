@@ -407,7 +407,7 @@ input {
   margin-bottom: 12px;
 }
 
-.coupon-input,
+.coupon-form,
 .gift-card,
 .price-card {
   border: 1px solid var(--line);
@@ -415,23 +415,53 @@ input {
   background: var(--surface-soft);
 }
 
-.coupon-input {
+.coupon-form {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 16px;
+  padding: 12px;
 }
 
-.coupon-input strong {
-  margin-left: auto;
-  color: var(--success);
+.coupon-form input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #dfd8cf;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  padding: 13px 14px;
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.coupon-input button {
+.coupon-form input::placeholder {
+  color: #9a928d;
+}
+
+.coupon-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(122, 90, 58, 0.12);
+}
+
+.coupon-form button {
   border: 0;
-  background: transparent;
-  color: var(--muted);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #111, #2d251f);
+  color: #fff;
+  padding: 13px 18px;
+  font-weight: 600;
   cursor: pointer;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+  white-space: nowrap;
+}
+
+.coupon-form button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
 }
 
 .gift-card {
@@ -465,7 +495,6 @@ input {
   opacity: 0.8;
   padding-right: 50px;
   padding-top: 10px;
-
 }
 
 .price-card {
