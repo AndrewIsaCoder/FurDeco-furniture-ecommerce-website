@@ -37,12 +37,40 @@
       </ul>
     </div>
 
-    <h1 class="welcome-text-first">Popular Products</h1>
-    <p class="welcome-text2nd">
-      Join the countless others who have fallen in love with these popular
-      <br />
-      products. Each item has been a top performer.
-    </p>
+    <div class="top-section-wrapper">
+      <div class="welcome-section">
+        <h1 class="welcome-text-first">Popular Products</h1>
+        <p class="welcome-text2nd">
+          Join the countless others who have fallen in love with these popular
+          <br />
+          products. Each item has been a top performer.
+        </p>
+      </div>
+      <div class="search-section-main">
+        <div class="search-bar-main">
+          <input
+            type="text"
+            class="search-bar-input-main"
+            placeholder="Search products..."
+            aria-label="Search products"
+          />
+          <a href="#" id="search-bar-products" onclick="findProductByName()">
+          <svg
+            class="search-icon-main"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="align-items-tag">
       <hr />
       <div class="icons-organizer">
